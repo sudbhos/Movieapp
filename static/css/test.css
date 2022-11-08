@@ -1,0 +1,18 @@
+body{
+
+background: #e0ebe8;
+  min-height: 55vh;
+
+  }
+
+table,th,td {
+width: 50%;
+border: 1px solid;
+color:blue;
+}
+
+
+
+h1{
+color:blue;
+}

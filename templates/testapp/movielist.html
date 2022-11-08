@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie List </title>
+    <link rel="stylesheet" href="{% static 'css/test.css' %}">
+</head>
+<body>
+<div align="center">
+    <h1>Please find the Movie details.</h1><hr>
+    {% if my_movie %}
+    <table>
+        <thead>
+        <th> Realised Date</th>
+        <th> Movie Name </th>
+        <th> Hero </th>
+        <th> Heroine </th>
+        <th> Rating </th>
+
+        </thead>
+        {% for i in my_movie %}
+        <tr>
+            <td>{{i.rdate}}</td>
+            <td>{{i.moviename}}</td>
+            <td>{{i.hero}}</td>
+            <td>{{i.herine}}</td>
+            <td>{{i.rating}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>There is no data avalible..</p>
+    {% endif %}
+</div>
+</body>
+</html>
